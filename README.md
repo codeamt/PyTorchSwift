@@ -2,6 +2,8 @@
 
 A Swift Wrapper for  PyTorch and Torchvision.
 
+<p align=center><img src="pytorch.png" width="50%" /></p>
+
 
 ## Install 
 
