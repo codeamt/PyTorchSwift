@@ -17,7 +17,7 @@ Add the following line to your dependencies in `Package.swift` file
 
 ## Usage
 
-### Getting Started: 
+### Importing: 
 
 ```
 import Foundation 
