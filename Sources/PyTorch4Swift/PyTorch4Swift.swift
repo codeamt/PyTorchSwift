@@ -1,18 +1,12 @@
 import Foundation
 import Python
-import TensorFlow
 
-
-
-class PyTorch4Swift {
-    
+class PyTorchSwift {
     init() {
         _ = PythonImports()
     }
-    
-    //alln basic math ops
+    //basic math ops
     let torch = PythonImports.torch
-    
     //easy access to tensor types
     let Tensor = PythonImports.torch.Tensor
     let ByteTensor = PythonImports.torch.ByteTensor
@@ -23,19 +17,8 @@ class PyTorch4Swift {
     let ShortTensor = PythonImports.torch.ShortTensor
     let IntTensor = PythonImports.torch.IntTensor
     let LongTensor = PythonImports.torch.LongTensor
-
-    
-    struct quasirandom {
-        let SobolEngine = PythonImports.torch.quasirandom.SobolEngine
-    }
- 
-    struct sparse {
-        let FloatTensor = PythonImports.torch.sparse.FloatTensor
-        let addmm = PythonImports.torch.sparse.addmm
-        let mm = PythonImports.torch.sparse.mm
-        let sum = PythonImports.torch.sparse.sum
-    }
-    
+    let quasirandom = PythonImports.torch.quasirandom
+    let sparse = PythonImports.torch.sparse
     let cuda = PythonImports.torch.cuda
     let FloatStorage = PythonImports.torch.FloatStorage
     let autograd = PythonImports.torch.autograd
@@ -48,19 +31,4 @@ class PyTorch4Swift {
     let onyx = PythonImports.torch.onyx
     let nn = PythonImports.torch.nn
     let utils = PythonImports.torch.utils
-
-    struct nn {
-        let functional = PythonImports.torch.nn.functional
-        let `init` = PythonImports.torch.nn.`init`
-    }
-    
-    struct utils {
-        let bottleneck = PythonImports.torch.utils.bottleneck
-        let checkpoint = PythonImports.torch.utils.checkpoint
-        let data = PythonImports.torch.utils.data
-        let cpp_extension = PythonImports.torch.utils.cpp_extension
-        let dlpack = PythonImports.torch.utils.dlpack
-        let model_zoo = PythonImports.torch.utils.model_zoo
-        let tensorboard = PythonImports.torch.utils.tensorboard
-    }
 }
