@@ -4,12 +4,15 @@ A Swift Wrapper for  PyTorch and Torchvision.
 
 <p align=center><img src="pt4slogo.png" width="50%" /></p>
 
+**Note**: This project is not affiliated with PyTorch and is still in early development. 
 
-## Install 
 
-**Note**: This library requires Xcode toolchain Swift for [Tensorflow release/Swift 5](https://swift.org/download/)
+## Getting Started 
 
-### Using Swift Package Manager 
+### Prerequisites:  
+This library requires Xcode toolchain Swift for [Tensorflow release/Swift 5](https://swift.org/download/)
+
+### Installing with Swift Package Manager: 
 Add the following line to your dependencies in `Package.swift` file
 ```
 .package(url: "https://github.com/codeamt/PyTorchSwift.git", .branch("master")),
@@ -18,7 +21,7 @@ Add the following line to your dependencies in `Package.swift` file
 
 ## Usage
 
-### Getting Started 
+### Getting Started: 
 
 ```
 import Foundation 
@@ -30,7 +33,7 @@ let torchvision = TorchVision4Swift()
 
 ```
 **Note**: If you have trouble or get errors importing Python (even after upgrading your toolchain), try changing your build system to legacy: File > Project Settings> Build System -> Legacy
-### Data Preprocessing  
+### Data Preprocessing:  
 ```
 var transforms_list:[PythonObject] = [torchvision.transforms.ToTensor(),
                                       torchvision.transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])]
@@ -47,7 +50,7 @@ let testloader = torch.utils.data.DataLoader(testset, batch_size:4, shuffle:fals
 let labels = ("plane", "car", "bird", "cat","deer", "dog", "frog", "horse", "ship", "truck")
 ```
 
-### Setting Up Transfer Learning
+### Setting Up Transfer Learning:
 ```
 let arch = torchvision.models.resnet18(pretrained=True)
 
@@ -65,7 +68,7 @@ let optimizer = torch.optim.SGD(arch.parameters(), lr:0.001, momentum:0.9)
 var  runningLoss = 0.0
 ```
 
-### Training
+### Training:
 ```
 for epoch in 0...50 {
   runningLoss = 0.0
@@ -101,7 +104,7 @@ for epoch in 0...50 {
   print("Finished Training")
 }
 ```
-### Testing
+### Testing:
 ```
 // Test network
 let testiter = Python.enumerate(testloader)
@@ -117,6 +120,6 @@ print("test images: ",images)
 print("test labels: ",labels)
 print("nn outputs: ",outputs)
 ```
-## Additional Notes 
+## Additional Notes: 
 
 This library was inspired by this [repo](https://github.com/johndpope/SwiftTorch) (an executable project) and learnings from the [Fast.ai Live Course (2019) - Part 2](https://course.fast.ai/videos/?lesson=13) with the intention diversifying the DL/ML libraries available to Swift developers working on ML/DL projects and research. To report bugs please submit an issue. To contribute, please make a pull request!
