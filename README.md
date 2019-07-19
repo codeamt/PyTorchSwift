@@ -1,12 +1,9 @@
-<h1 align="center">PyTorchSwift</h1>
-
 <p align=center><img src="pt4slogo.png" width="50%" /></p>
 <p align=center>A Swift Wrapper for  PyTorch and Torchvision.</p>
 
-**Note**: This project is not affiliated with PyTorch and is still in early development. 
-
 
 ## Getting Started 
+**Note**: This project is not affiliated with PyTorch and is still in early development. 
 
 ### Prerequisites:  
 This library requires Xcode toolchain Swift for [Tensorflow release/Swift 5](https://swift.org/download/)
