@@ -24,8 +24,8 @@ import Foundation
 import Python
 import PyTorch4Swift 
 
-let torch = PyTorch4Swift()
-let torchvision = TorchVision4Swift()
+let torch = PyTorchSwift()
+let torchvision = TorchVisionSwift()
 
 ```
 **Note**: If you have trouble or get errors importing Python (even after upgrading your toolchain), try changing your build system to legacy: File > Project Settings> Build System -> Legacy
