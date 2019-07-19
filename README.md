@@ -2,12 +2,12 @@
 
 A Swift Wrapper for  PyTorch and Torchvision.
 
-<p align=center><img src="pytorch.png" width="50%" /></p>
+<p align=center><img src="pt4slogo.png" width="50%" /></p>
 
 
 ## Install 
 
-**Note**: This library requires xcode toolchain Swift for [Tensorflow release/Swift 5](https://swift.org/download/)
+**Note**: This library requires Xcode toolchain Swift for [Tensorflow release/Swift 5](https://swift.org/download/)
 
 ### Using Swift Package Manager 
 Add the following line to your dependencies in `Package.swift` file
@@ -119,4 +119,4 @@ print("nn outputs: ",outputs)
 ```
 ## Additional Notes 
 
-This library was inspired by this [repo](https://github.com/johndpope/SwiftTorch) (an executable project) and learnings from the [Fast.ai Live Course (2019) - Part 2](https://course.fast.ai/videos/?lesson=13) with the intention of making PyTorch more accessible to Swift developers working on ML/DL projects and research. To report bugs please submit an issue. To contribute, please make a pull request!
+This library was inspired by this [repo](https://github.com/johndpope/SwiftTorch) (an executable project) and learnings from the [Fast.ai Live Course (2019) - Part 2](https://course.fast.ai/videos/?lesson=13) with the intention diversifying the DL/ML libraries available to Swift developers working on ML/DL projects and research. To report bugs please submit an issue. To contribute, please make a pull request!
